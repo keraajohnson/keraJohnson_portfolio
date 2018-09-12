@@ -1,0 +1,77 @@
+// global styles
+
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1080px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+// color utils
+$ltYellow: rgb(236, 201, 135);
+$dkYellow: rgb(220, 181, 78);
+$pink: rgb(249, 223, 210);
+$black: rgb(38, 45, 38);
+$white: rgb(250, 250, 250);
+
+// typography mixins
+
+@mixin heading($fontSize) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $fontSize;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+@mixin text($fontSize) {
+    font-family: 'Raleway', sans-serif;
+    font-size: $fontSize;
+    letter-spacing: 3px;
+    line-height: 20px;
+}
+
+// misc mixins
+
+@mixin displayFlex {
+    display: flex;
+}
+
+// breakpoint mixins
+
+@mixin breakpoint($point){
+    @if $point == laptop{
+        @media (max-width: 1024px) { @content ; }
+    }
+    @else if $point == bigPhablet{
+        @media (max-width: 960px) { @content ; }
+    }
+    @else if $point == medPhablet{
+        @media (max-width: 720px)  { @content ; }
+    }
+    @else if $point == phablet{
+        @media (max-width: 550px)  { @content ; }
+    }
+    @else if $point == mobile{
+        @media (max-width: 375px)  { @content ; }
+    }
+    @else if $point == smallMobile{
+        @media (max-width: 320px)  { @content ; }
+    }
+}
