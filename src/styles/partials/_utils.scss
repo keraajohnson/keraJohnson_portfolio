@@ -24,6 +24,14 @@ img{
     display: block;
 }
 
+.visuallyHidden {
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+
 // color utils
 $ltYellow: rgb(236, 201, 135);
 $dkYellow: rgb(220, 181, 78);
@@ -35,6 +43,7 @@ $white: rgb(250, 250, 250);
 
 @mixin heading($fontSize) {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: $fontSize;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -57,7 +66,7 @@ $white: rgb(250, 250, 250);
 
 @mixin breakpoint($point){
     @if $point == laptop{
-        @media (max-width: 1024px) { @content ; }
+        @media (max-width: 1025px) { @content ; }
     }
     @else if $point == bigPhablet{
         @media (max-width: 960px) { @content ; }
@@ -72,6 +81,6 @@ $white: rgb(250, 250, 250);
         @media (max-width: 375px)  { @content ; }
     }
     @else if $point == smallMobile{
-        @media (max-width: 320px)  { @content ; }
+        @media (max-width: 321px)  { @content ; }
     }
 }

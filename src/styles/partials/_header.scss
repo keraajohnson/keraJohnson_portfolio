@@ -1,8 +1,51 @@
 // header nav styles
-
+header {
+    height: 100vh;
+    // phablet breakpoint
+    @include breakpoint(phablet) {
+        height: 97vh;
+    }
+}
 .nav {
-    ul {
-        padding: 0;
-        margin: 0;
+   ul {
+       @include displayFlex;
+       justify-content: flex-end;
+       margin-top: 20px;
+       background-color: white;
+       li {
+            list-style-type: none;
+            a {
+                @include heading(1.7rem);
+                text-decoration: none;
+                color: $black;
+                padding: 10px 20px;
+            }
+       }
+   }
+}
+
+.headerMain {
+    margin-top: 90px;
+    @include displayFlex;
+        .hi,
+        .photo {
+            width: 50%;
+        }
+        .hi{
+            margin-top: 50px;
+            @include breakpoint(bigPhablet) {
+                width: 100%;
+            }
+        }
+        .photo {
+            // bigPhablet breakpoint
+            @include breakpoint(bigPhablet) {
+                display: none;
+            }
+        }
+    h2{
+        @include heading(2.5rem);
+        background: white;
+        padding: 15px;
     }
 }

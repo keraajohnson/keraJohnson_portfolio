@@ -1,0 +1,169 @@
+.work {
+    h2 {
+        @include heading(2.5rem);
+         width: 35%;
+         position: relative;
+         margin: 0 auto;
+         text-align: center;
+         padding: 15px;
+         margin: 30px auto;
+         // bigPhablet breakpoint
+         @include breakpoint(bigPhablet) {
+             width: 45%;
+         }
+         // medPhablet breakpoint
+         @include breakpoint(medPhablet) {
+             width: 60%;
+         }
+         // phablet breakpoint
+         @include breakpoint(phablet) {
+             width: 70%;
+         }
+          //  mobile breakpoint
+          @include breakpoint(mobile) {
+              width: 100%;
+          }
+          //  smallMobile breakpoint 
+          @include breakpoint(smallMobile) {
+              font-size: 2rem;
+          }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 30px;
+                left: -30px;
+                width: 20%;
+                height: 2px;
+                background-color: $black;
+                // bigPhablet breakpoint
+                @include breakpoint(bigPhablet) {
+                    left: -45px;
+                }
+                // phablet breakpoint
+                @include breakpoint(phablet) {
+                    display: none;
+                }
+            }
+    }
+    .mainCarousel {
+        width: 100%;
+        height: 85vh;
+        background-color: #f0eded;
+        // laptop
+        @include breakpoint(laptop) {
+            height: 40vh;
+        }
+        // bigPhablet breakpoint
+        @include breakpoint(bigPhablet) {
+            height: 55vh;
+        }
+        // medPhablet breakpoint
+        @include breakpoint(medPhablet) {
+            height: 60vh;
+        }
+        // phablet breakpoint
+        @include breakpoint(phablet) {
+            height: 75vh;
+        }
+        // mobile breakpoint
+        @include breakpoint(mobile) {
+            height: 75vh;
+        }
+        .project {
+            width: 100%;
+            padding: 10px 70px;
+            // phablet breakpoint
+            @include breakpoint(phablet) {
+               padding: 12px;
+            }
+            .description {
+                h3{
+                    @include heading(2.3rem);
+                    font-weight: 500;
+                }
+                p {
+                    @include text(1.5rem);
+                    // phablet breakpoint
+                    @include breakpoint(phablet) {
+                        font-size: 1.2rem;
+                    }
+                }
+                .languages {
+                    @include heading(1.5rem);
+                    @include displayFlex;
+                    flex-wrap: nowrap;
+                     // mobile breakpoint
+                     @include breakpoint(phablet) {
+                         flex-wrap: wrap;
+                     }
+                    p {
+                        margin: 10px 8px;
+                        // phablet breakpoint
+                        @include breakpoint(phablet) {
+                            margin: 3px 5px;
+                        }
+                         // mobile breakpoint
+                         @include breakpoint(mobile) {
+                             margin: 3px 5px;
+                         }
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                    }
+                }
+            }
+            .mockup {
+                width: 45%;
+                margin: 0 auto;
+                 // bigPhablet breakpoint
+                 @include breakpoint(bigPhablet) {
+                     width: 65%;
+                 }
+                 // medPhablet breakpoint
+                 @include breakpoint(medPhablet) {
+                     width: 90%;
+                 }
+                 // phablet breakpoint
+                 @include breakpoint(phablet) {
+                     width: 100%;
+                 }
+            }
+            .view {
+                @include displayFlex;
+                width: 100%;
+                justify-content: flex-end;
+                    button {
+                        @include heading(1.3rem);
+                        justify-content: flex-end;
+                        margin: 0 8px;
+                        font-weight: 400;
+                        background: $white;
+                        border: 3px solid $black;
+                        padding: 15px;
+                        transition: 1s all ease;
+                             &:hover {
+                                 background: #FFE4E1;
+                             }
+                    }
+            }
+        }
+    }
+}
+
+// .beerBible {
+//     background-color: rgb(225, 245, 240);
+// }
+// .recipeBox {
+//     background-color: #DEE7E7;
+// }
+// .capitalCities {
+//     background-color: rgb(218, 224, 242);
+// }
+
+// .excusesExcuses {
+//     background-color: #EAE8FF;
+// }
+
+// .psd {
+//     background-color: rgb(240, 224, 221);
+// }
