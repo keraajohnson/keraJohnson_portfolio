@@ -1,37 +1,29 @@
 .skills {
-    margin-bottom: 100px;
-    padding: 20px 0;
+    margin-top: 70px;
+    margin-bottom: 70px;
         h2 {
             @include heading(2rem);
             margin-bottom: 50px;
             text-align: center;
             font-weight: 500;
-                &::after {
-                    content: ''
-                }
         }
         .skillsContainer {
             @include displayFlex;
-            width: 85%;
-            margin: 0 auto;
-            justify-content: space-around;
-            flex-wrap: nowrap;
-            // bigPhablet breakpoint
-            @include breakpoint(bigPhablet) {
-                width: 95%;
-            }
-            // medPhablet breakpoint
-            @include breakpoint(medPhablet) {
-                width: 100%;
-                flex-wrap: wrap;
-            }
-            .skill {
-                font-size: 6rem;
-                color: $black;
-                // medPhablet breakpoint
-                @include breakpoint(medPhablet) {
-                    font-size: 4.5rem;
+            flex-wrap: wrap;
+            min-width: 540px;
+                .skill {
+                    font-size: 8.7rem;
+                    color: $black;
+                    margin: 0 10px;
                 }
             }
         }
-}
+
+        .boxOne, 
+        .boxTwo {
+            @include displayFlex;
+            flex-grow: 1;
+                .trick {
+                    flex-grow: 1;
+                }
+        }

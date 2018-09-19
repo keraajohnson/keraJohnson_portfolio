@@ -1,10 +1,5 @@
 .about {
     clear: both;
-    padding: 50px 0;
-    // phablet breakpoint
-    @include breakpoint(phablet) {
-        padding: 5px 0;
-    }
         h2{
             @include heading(2.5rem);
             position: relative;
@@ -53,7 +48,7 @@
             @include breakpoint(bigPhablet) {
                 display: block;
                 margin: 15px auto;
-                width: 70%;
+                width: 85%;
             }
             // medPhablet breakpoint
             @include breakpoint(medPhablet) {

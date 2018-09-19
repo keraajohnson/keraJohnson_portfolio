@@ -1,12 +1,15 @@
 // header nav styles
 header {
     height: 100vh;
-    // phablet breakpoint
-    @include breakpoint(phablet) {
-        height: 97vh;
+    // background: red;
+    @include breakpoint(medPhablet) {
+        height: 80vh;
     }
 }
 .nav {
+    @include breakpoint(medPhablet) {
+        display: none;
+    }
    ul {
        @include displayFlex;
        justify-content: flex-end;
@@ -24,8 +27,65 @@ header {
    }
 }
 
+.navMobile {
+    display: none;
+    width: 100%;
+    // position: absolute;
+    @include breakpoint(medPhablet) {
+        display: block;
+    }
+    .hamburger {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+            .icon {
+                font-size: 4rem;
+            }
+    }
+    .menu {
+        display: none;
+        background: white;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin-top: 0;
+        .icon {
+            font-size: 4rem;
+        }
+        li {
+            list-style: none;
+            padding: 20px;
+            text-align: center;
+            a {
+                @include heading(4rem);
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $black;
+                transition: color 0.5s ease;
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .show {
+        display: block;
+        width: 100%;
+    }
+}
+
+ .bars {
+     width: 8%;
+     float: right;
+ }
+
 .headerMain {
-    margin-top: 90px;
+    margin-top: 135px;
     @include displayFlex;
         .hi,
         .photo {
@@ -33,8 +93,13 @@ header {
         }
         .hi{
             margin-top: 50px;
+            // bigPhablet breakpoint
             @include breakpoint(bigPhablet) {
                 width: 100%;
+            }
+            // 
+            @include breakpoint(medPhablet){
+                margin-top: 100px;
             }
         }
         .photo {

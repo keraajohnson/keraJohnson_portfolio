@@ -10,19 +10,38 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="node_modules/wowjs/css/libs/animate.css">
+    <link rel="stylesheet" href="public/scripts/animate.css/animate.css">
 
     <link rel="stylesheet" href="public/styles/style.css">
     <title>Kera Johnson</title>
 </head>
 
 <body>
+    <!-- easter egg -->
+    <div id="bagel-container" class="hide">
+        <div class="bagels bagels1"><img src="/public/assets/bens-bagels.png" alt=""></div>
+        <div class="bagels bagels2"><img src="/public/assets/bens-bagels.png" alt=""></div>
+        <div class="bagels bagels3"><img src="/public/assets/bens-bagels.png" alt=""></div>
+        <div class="bagels bagels4"><img src="/public/assets/bens-bagels.png"alt=""></div>
+        <div class="bagels bagels5"><img src="/public/assets/bens-bagels.png" alt=""></div>
+    </div>
     <!-- 1. header -->
     <header>
         <div class="wrapper">
             <!-- 1.1 nav -->
             <nav class="nav">
                 <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="navMobile">
+                <div class="hamburger">
+                    <img class="bars" src="/public/assets/bars-solid.png" alt="">
+                </div>
+                <ul class="menu">
+                    <li class="exit-responsive icon"><i class="fas fa-times"></i></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -37,7 +56,7 @@
                     <h2>I really like <span class="typedStrings"></span></h2>
                 </div>
                 <div class="photo">
-                    <img src="/src/assets/keraTempPhoto.jpg" alt="">
+                    <img src="/public/assets/keraTempPhoto.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -49,7 +68,7 @@
             <div class="wrapper">
                 <h2 class="wow slideInRight animate">About Me</h2>
                 <div class="aboutImg">
-                    <img src="/src/assets/keraTempPhoto.jpg" alt="">
+                    <img src="/public/assets/keraTempPhoto.jpg" alt="">
                 </div>
                 <div class="aboutText">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam esse architecto, vitae quidem
@@ -66,37 +85,41 @@
         <!-- 2.2 skills -->
         <section class="skills">
             <div class="wrapper">
-                <h2>I'm more than a one trick pony</h2>
+                <h2>My Toolbox</h2>
                 <div class="skillsContainer">
-                    <div class="html">
-                        <i class="devicon-html5-plain skill"></i>
+                    <div class="boxOne">
+                        <div class="html trick">
+                            <i class="devicon-html5-plain skill"></i>
+                        </div>
+                        <div class="css trick">
+                            <i class="devicon-css3-plain skill"></i>
+                        </div>
+                        <div class="sass trick">
+                            <i class="devicon-sass-original skill"></i>
+                        </div>
+                        <div class="js trick">
+                            <i class="devicon-javascript-plain skill"></i>
+                        </div>
+                        <div class="jquery trick">
+                            <i class="devicon-jquery-plain skill"></i>
+                        </div>
                     </div>
-                    <div class="css">
-                        <i class="devicon-css3-plain skill"></i>
-                    </div>
-                    <div class="sass">
-                        <i class="devicon-sass-original skill"></i>
-                    </div>
-                    <div class="js">
-                        <i class="devicon-javascript-plain skill"></i>
-                    </div>
-                    <div class="jquery">
-                        <i class="devicon-jquery-plain skill"></i>
-                    </div>
-                    <div class="react">
-                        <i class="devicon-react-original skill"></i>
-                    </div>
-                    <div class="gulp">
-                        <i class="devicon-gulp-plain skill"></i>
-                    </div>
-                    <div class="git">
-                        <i class="devicon-git-plain skill"></i>
-                    </div>
-                    <div class="github">
-                        <i class="devicon-github-plain skill"></i>
-                    </div>
-                    <div class="vscode">
-                        <i class="devicon-visualstudio-plain skill"></i>
+                    <div class="boxTwo">
+                        <div class="react trick">
+                            <i class="devicon-react-original skill"></i>
+                        </div>
+                        <div class="gulp trick">
+                            <i class="devicon-gulp-plain skill"></i>
+                        </div>
+                        <div class="git trick">
+                            <i class="devicon-git-plain skill"></i>
+                        </div>
+                        <div class="github trick">
+                            <i class="devicon-github-plain skill"></i>
+                        </div>
+                        <div class="vscode trick">
+                            <i class="devicon-visualstudio-plain skill"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,133 +129,151 @@
             <div class="wrapper">
                 <h2 class="wow slideInRight animate">Selected Work</h2>
                 <!-- 2.3a beer bible -->
-                <div class="mainCarousel">
-                    <div class="beerBible project">
-                        <div class="description">
-                            <h3>01. Beer Bible</h3>
-                            <div class="languages">
-                                <p>React</p>
-                                <p>Javascript</p>
-                                <p>Api</p>
-                                <p>Firebase</p>
-                                <p>SASS</p>
-                                <p>Git</p>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <div class="beerBible project">
+                    <div class="description">
+                        <h3>01. Beer Bible</h3>
+                        <div class="languages">
+                            <p>React</p>
+                            <p>Javascript</p>
+                            <p>Api</p>
+                            <p>Firebase</p>
+                            <p>SASS</p>
+                            <p>Git</p>
                         </div>
-                        <div class="mockup">
-                            <div class="laptop">
-                                <img src="/src/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
-                            </div>
-                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, dolore. Corrupti numquam
+                            ipsum accusamus nisi, maiores magni? Sequi cumque eveniet perspiciatis a excepturi, ipsa
+                            asperiores possimus soluta corporis voluptatibus. Quos.</p>
                         <div class="view">
                             <button>Live</button>
                             <button>GitHub</button>
                         </div>
                     </div>
-                    <!-- 2.3b recipe box -->
-                    <div class="recipeBox project">
-                        <div class="description">
-                            <h3>02. Virtual Recipe Box</h3>
-                            <div class="languages">
-                                <p>React</p>
-                                <p>JavaScript</p>
-                                <p>Firebase</p>
-                                <p>Git</p>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="mockup">
+                        <div class="laptop">
+                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
                         </div>
-                        <div class="mockup">
-                            <div class="laptop">
-                                <img src="/src/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
-                            </div>
+                    </div>
+                </div>
+                <!-- 2.3b recipe box -->
+                <div class="recipeBox project">
+                    <div class="mockup">
+                        <div class="laptop">
+                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
                         </div>
+                    </div>
+                    <div class="description">
+                        <h3>02. Virtual Recipe Box</h3>
+                        <div class="languages">
+                            <p>React</p>
+                            <p>JavaScript</p>
+                            <p>Firebase</p>
+                            <p>Git</p>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ab? Et nostrum saepe odio
+                            consequuntur. Qui,
+                            facilis harum. Dolor voluptatem repellendus architecto totam laborum voluptates, voluptatum
+                            nobis. Accusamus,
+                            itaque praesentium.</p>
                         <div class="view">
                             <button>Live</button>
                             <button>GitHub</button>
                         </div>
                     </div>
-                    <!-- 2.3c capital cities -->
-                    <div class="capitalCities project">
-                        <div class="description">
-                            <h3>03. Capital.ly Confused</h3>
-                            <div class="languages">
-                                <p>JavaScript</p>
-                                <p>jQuery</p>
-                                <p>SASS</p>
-                                <p>Gulp</p>
-                                <p>Git</p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, sequi? Ullam perspiciatis</p>
+                </div>
+                <!-- 2.3c capital cities -->
+                <div class="capitalCities project">
+                    <div class="description">
+                        <h3>03. Capital.ly Confused</h3>
+                        <div class="languages">
+                            <p>JavaScript</p>
+                            <p>jQuery</p>
+                            <p>SASS</p>
+                            <p>Gulp</p>
+                            <p>Git</p>
                         </div>
-                        <div class="mockup">
-                            <div class="laptop">
-                                <img src="/src/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
-                            </div>
-                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla suscipit vitae temporibus!
+                            Eos exercitationem sed, odio laudantium error quibusdam libero nostrum incidunt temporibus
+                            repellendus officiis hic doloremque voluptates unde nobis.</p>
                         <div class="view">
                             <button>Live</button>
                             <button>GitHub</button>
                         </div>
                     </div>
-                    <!-- 2.3d excuses excuses -->
-                    <div class="excusesExcuses project">
-                        <div class="description">
-                            <h3> 04. Excuses, Excuses</h3>
-                            <div class="languages">
-                                <p>JavaScript</p>
-                                <p>jQuery</p>
-                                <p>SASS</p>
-                                <p>Git</p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, cumque nihil eius ea</p>
+                    <div class="mockup">
+                        <div class="laptop">
+                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
                         </div>
-                        <div class="mockup">
-                            <div class="laptop">
-                                <img src="/src/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
-                            </div>
+                    </div>
+                </div>
+                <!-- 2.3d excuses excuses -->
+                <div class="excusesExcuses project">
+                    <div class="mockup">
+                        <div class="laptop">
+                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
                         </div>
+                    </div>
+                    <div class="description">
+                        <h3> 04. Excuses, Excuses</h3>
+                        <div class="languages">
+                            <p>JavaScript</p>
+                            <p>jQuery</p>
+                            <p>SASS</p>
+                            <p>Git</p>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nisi nostrum alias
+                            inventore, accusantium
+                            debitis soluta quia consequuntur sapiente odit qui porro maiores minima perspiciatis illo!
+                            Ratione eligendi aut
+                            voluptas.</p>
                         <div class="view">
                             <button>Live</button>
                             <button>GitHub</button>
                         </div>
                     </div>
-                    <!-- 2.3e psd conversion -->
-                    <div class="psd project">
-                        <div class="description">
-                            <h3>05. PSD Conversion</h3>
-                            <div class="languages">
-                                <p>HTML</p>
-                                <p>SASS</p>
-                                <p>jQuery</p>
-                                <p>Git</p>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus neque fuga tenetur</p>
+                </div>
+                <!-- 2.3e psd conversion -->
+                <div class="psd project">
+                    <div class="description">
+                        <h3>05. PSD Conversion</h3>
+                        <div class="languages">
+                            <p>HTML</p>
+                            <p>SASS</p>
+                            <p>jQuery</p>
+                            <p>Git</p>
                         </div>
-                        <div class="mockup">
-                            <div class="laptop">
-                                <img src="/src/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
-                            </div>
-                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet repudiandae qui sequi
+                            recusandae magni necessitatibus culpa cum, corrupti ut maxime eius explicabo obcaecati
+                            error, asperiores inventore dolores officia atque aliquid.</p>
                         <div class="view">
                             <button>Live</button>
                             <button>GitHub</button>
                         </div>
                     </div>
-                    <div class="tv project">
-                        <div class="description">
-                            <h3>Shows I've Produced</h3>
-                            <div class="mockup">
-                                <div class="him">
-
-                                </div>
-                                <div class="ftn">
-
-                                </div>
-                                <div class="equator">
-                                    
-                                </div>
-                            </div>
+                    <div class="mockup">
+                        <div class="laptop">
+                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="tv project">
+                    <div class="heading">
+                        <h3>Shows I've Produced</h3>
+                    </div>
+                    <div class="shows">
+                        <div class="him show">
+                            <h4>How It's Made</h4>
+                            <p>Discovery Canada</p>
+                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
+                        </div>
+                        <div class="ftn show">
+                            <h4>Fear Thy Neighbor</h4>
+                            <p>Investigation Discovery</p>
+                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
+                        </div>
+                        <div class="equator show">
+                            <h4>Equator</h4>
+                            <p>Discovery Canada</p>
+                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -245,7 +286,7 @@
                     <h3>Like what you see?</h3>
                     <p>Here's Where You Can Find Me</p>
                     <div class="email social">
-                        <i class="far fa-paper-plane icon"></i> <a class="emailLink" href="mailto:kera.andrea@gmail.com">hello@keracodes.com</a>
+                        <i class="far fa-paper-plane icon"></i> <a class="emailLink" href="mailto:kera.andrea@gmail.com">hello[at]keracodes[dot]com</a>
                     </div>
                     <div class="twitter social">
                         <i class="fab fa-twitter icon"></i>
@@ -267,7 +308,7 @@
                 <div class="hireMe">
                     <div class="form">
                         <form method="POST" action="https://formspree.io/kera.andrea@gmail.com">
-                            <h3>Say Hi(re me)👋🏻</h3>
+                            <h3>Say Hi(re me)</h3>
                             <!-- name input -->
                             <label for="name" class="nameLabel visuallyHidden" id="nameLabel">Name</label>
                             <input type="text" name="name" class="name" id="name" placeholder="name">
@@ -294,7 +335,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
-    <script src="node_modules/wowjs/dist/wow.min.js"></script>
+    <script src="public/scripts/wowjs/dist/wow.min.js"></script>
 
     <script src="public/scripts/app.js"></script>
 </body>
