@@ -2,10 +2,36 @@
     margin-top: 100px;
     h2 {
         @include heading(2.5rem);
-        width: 35%;
+        width: 50%;
         position: relative;
         margin: 0 auto;
         text-align: center;
+        // phablet breakPoint
+        @include breakpoint(phablet) {
+            width: 100%;
+        }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 40%;
+                left: 3.5%;
+                width: 20%;
+                height: 2px;
+                background-color: $black;
+                // laptop breakpoint
+                @include breakpoint(laptop) {
+                    left: -5%;
+                }
+                // bigPhablet breakpoint
+                @include breakpoint(bigPhablet) {
+                    left: -10%;
+                    width: 23%;
+                }
+                //  medPhablet breakpoint
+                @include breakpoint(medPhablet) {
+                    display: none;
+                }
+            }
     }
     .project {
         @include displayFlex;
@@ -16,47 +42,79 @@
         @include breakpoint(bigPhablet) {
             flex-direction: column;
         }
-            .mockup,
-            .description {
-                width: 50%;
+        .mockup,
+        .description {
+            width: 50%;
+            // bigPhablet breakpoint
+            @include breakpoint(bigPhablet) {
+                width: 100%;
+            }
+        }
+        .mockup {
+            @include displayFlex;
+            .laptop {
+                margin-top: 50px;
+                width: 85%;
+                position: relative;
+            }
+            .phone {
+                width: 35%;
+                position: absolute;
+                top: 3%;
+                left: -11%;
                 // bigPhablet breakpoint
                 @include breakpoint(bigPhablet) {
-                    width: 100%;
+                    left: 75%;
                 }
             }
-            .mockup {
-                // bigPhablet breakpoint
-                @include breakpoint(bigPhablet) {
-                    width: 80%;
-                    margin: 0 auto;
-                }
+            .phoneTwo {
+                width: 35%;
+                position: absolute;
+                top: 3%;
+                right: -8%;
             }
-            .description {
-                padding: 35px;
-                h3 {
-                    @include heading(2.7rem);
-                    font-weight: 500;
-                }
-                p {
-                    @include text(1.5rem);
-                    line-height: 30px;
-                }
-                .languages {
-                    @include heading(1.5rem);
-                    @include displayFlex;
-                        p {
-                            margin: 10px 8px;
-                                &:first-child {
-                                    margin-left: 0;
-                                }
-                        }
+            // bigPhablet breakpoint
+            @include breakpoint(bigPhablet) {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        .description {
+            padding: 35px;
+            h3 {
+                @include heading(2.7rem);
+                font-weight: 500;
+            }
+            p {
+                @include text(1.5rem);
+                line-height: 30px;
+            }
+            .ruined {
+                font-style: italic;
+            }
+            .languages {
+                margin: 15px 0;
+                @include heading(1.5rem);
+                @include displayFlex;
+                flex-wrap: wrap;
+                    p {
+                        margin: 0px 8px;
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                    }
                 }
                  .view {
                      @include displayFlex;
                      width: 100%;
-                     button {
+                     @include breakpoint(bigPhablet) {
+                         margin: 0 auto;
+                     }
+                     a {
                          @include heading(1.3rem);
                          justify-content: flex-end;
+                         text-decoration: none;
+                         color: $black;
                          margin: 12px 8px;
                          font-weight: 400;
                          background: $white;
@@ -73,6 +131,11 @@
                  }
             }
         }
+        .reverse {
+            @include breakpoint(bigPhablet) {
+                flex-direction: column-reverse;
+            }
+        }
         .tv {
             @include displayFlex;
             flex-direction: column;
@@ -82,11 +145,31 @@
                     font-weight: 500;
                     padding: 30px 0;
                     text-align: center;
+                     @include breakpoint(bigPhablet) {
+                       padding: 20px 0;
+                     }
                 }
             }
             .shows {
                 @include displayFlex;
+                padding-bottom: 40px;
                 text-align: center;
+                width: 100%;
+                margin: 0 auto;
+                 @include breakpoint(bigPhablet) {
+                     flex-direction: column;
+                     width: 70%;
+                     padding-bottom: 10px; 
+                 }
+                .show {
+                    margin: 0 20px;
+                    img {
+                        margin: auto;
+                    }
+                     @include breakpoint(bigPhablet) {
+                        margin: 20px;
+                     }
+                }
                 h4 {
                     @include heading(1.7rem);
                 }

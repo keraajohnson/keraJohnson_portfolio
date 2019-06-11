@@ -3,56 +3,48 @@
         h2{
             @include heading(2.5rem);
             position: relative;
-            width: 25%;
+            width: 50%;
             margin: 0 auto;
             text-align: center;
-            // medPhablet breakpoint
-            @include breakpoint(medPhablet) {
-                width: 35%;
-            }
-            // phablet breakpoint
+            // phablet breakPoint
             @include breakpoint(phablet) {
-                width: 45%;
-            }
-             //  mobile breakpoint
-             @include breakpoint(mobile) {
-                 width: 60%;
-                 margin: 20px auto;
-             }
-            //  smallMobile breakpoint 
-            @include breakpoint(smallMobile) {
                 width: 100%;
-                margin-top: 120px;
             }
                 &::after {
                     content: '';
                     position: absolute;
-                    top: 15px;
-                    left: -30px;
-                    width: 25%;
+                    top: 40%;
+                    left: 12%;
+                    width: 20%;
                     height: 2px;
                     background-color: $black;
+                    // laptop breakpoint
+                    @include breakpoint(laptop) {
+                        left: 8%;
+                    }
                     // bigPhablet breakpoint
                     @include breakpoint(bigPhablet) {
-                        left: -45px;
+                        left: 6%;
                     }
-                     //  phablet breakpoint
-                     @include breakpoint(phablet) {
+                    //  medPhablet breakpoint
+                     @include breakpoint(medPhablet) {
                          display: none;
                      }
                 }
         }
         .aboutImg {
             display: none;
+                img {
+                    max-width: 75%;
+                    margin: auto;
+                    // phablet breakpoint
+                    @include breakpoint(phablet) {
+                        max-width: 100%;
+                    }
+                }
             // bigPhablet breakpoint
             @include breakpoint(bigPhablet) {
                 display: block;
-                margin: 15px auto;
-                width: 85%;
-            }
-            // medPhablet breakpoint
-            @include breakpoint(medPhablet) {
-                width: 95%;
                 margin: 20px auto;
             }
         }
@@ -73,6 +65,10 @@
                 margin-top: 25px;
                 line-height: 30px;
                 text-align: justify;
+            }
+            .tldr {
+                @include heading(1.8);
+                font-weight: 500;
             }
         }
     }

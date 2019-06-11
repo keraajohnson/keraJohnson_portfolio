@@ -1,172 +1,148 @@
 .contact {
-    margin: 40px 0;
-    
-     h2 {
-         @include heading(2.5rem);
-         position: relative;
-         width: 50%;
-         margin: 0 auto;
-         padding-bottom: 50px;
-         text-align: center;
-        //  medPhablet breakpoint
-        @include breakpoint(medPhablet){
-            padding-bottom: 40px;
-        }
-         // phablet breakpoint
-         @include breakpoint(phablet) {
-             width: 40%;
-         }
-        //  mobile breakpoint
-        @include breakpoint(mobile) {
-            width: 55%;
-        }
-         &::after {
-             content: '';
-             position: absolute;
-             top: 12px;
-             left: 55px;
-             width: 20%;
-             height: 2px;
-             background-color: $black;
-             // bigPhablet breakpoint
-             @include breakpoint(bigPhablet) {
-                 left: 0px;
-             }
-             // medPhablet breakpoint
-             @include breakpoint(medPhablet) {
-                 left: -20px;
-             }
-              //  phablet breakpoint
-              @include breakpoint(phablet) {
-                  display: none;
-              }
-         }
-     }
-    .wrapper {
+  margin: 40px 0;
+  h2 {
+    @include heading(2.5rem);
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    text-align: center;
+    // phablet breakPoint
+    @include breakpoint(phablet) {
+      width: 100%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: 21.5%;
+      width: 17%;
+      height: 2px;
+      background-color: $black;
+      // laptop breakpoint
+      @include breakpoint(laptop) {
+        left: 17%;
+        top: 18%;
+      }
+      // bigPhablet breakpoint
+      @include breakpoint(bigPhablet) {
+        left: 16%;
+      }
+      //  medPhablet breakpoint
+      @include breakpoint(medPhablet) {
+        display: none;
+      }
+    }
+  }
+  .wrapper {
+    @include displayFlex;
+    // phablet breakpoint
+    @include breakpoint(phablet) {
+      flex-direction: column;
+    }
+    .hireMe,
+    .contactMe {
+      width: 50%;
+      // phablet breakpoint
+      @include breakpoint(phablet) {
+        width: 100%;
+      }
+      h3 {
+        @include heading(2rem);
+        font-weight: 500;
+      }
+    }
+    .hireMe {
+      form {
         @include displayFlex;
+        flex-direction: column;
+        background: #dfdfdf;
+        padding: 40px;
         // phablet breakpoint
         @include breakpoint(phablet) {
-            flex-direction: column;
+          padding: 25px;
         }
-        .hireMe,
-        .contactMe {
-            width: 50%;
-            // phablet breakpoint
-            @include breakpoint(phablet) {
-                width: 100%;
-            }
-            h3 {
-                @include heading(2rem);
-                font-weight: 500;
-            }
+        .name,
+        .email,
+        .note {
+          @include text(1.5rem);
+          width: 90%;
+          border: none;
+          background: none;
+          border-bottom: 3px solid $black;
+          padding: 20px 0;
+          // medPhablet breakpoint
+          @include breakpoint(medPhablet) {
+            width: 95%;
+          }
+          // phablet breakpoint
+          @include breakpoint(phablet) {
+            width: 100%;
+          }
+          &::placeholder {
+            color: $black;
+          }
+          &:focus {
+            background: white;
+            outline: none;
+          }
         }
-        .hireMe {
-            form {
-                @include displayFlex;
-                flex-direction: column;
-                background: #dfdfdf;
-                padding: 40px;
-                // phablet breakpoint
-                @include breakpoint(phablet) {
-                    padding: 25px;
-                }
-                .name,
-                .email, 
-                .note {
-                    @include text(1.5rem);
-                    width: 90%;
-                    border: none;
-                    background: none;
-                    border-bottom: 3px solid $black;
-                    padding: 20px 0;
-                    // medPhablet breakpoint
-                    @include breakpoint(medPhablet) {
-                        width: 95%;
-                    }
-                    // phablet breakpoint
-                    @include breakpoint(phablet) {
-                        width: 100%;
-                    }
-                        &::placeholder {
-                            color: $black;
-                        }
-                        &:focus{
-                            background: white;
-                            outline: none;
-                        }
-                }
-                .note {
-                    padding: 70px 0;
-                }
-                .send {
-                    @include heading(1.3rem);
-                    background: white;
-                    border: 3px solid $black;
-                    width: 20%;
-                    padding: 15px;
-                    text-align: center;
-                    margin-top: 20px;
-                    transition: 1s all ease;
-                    // bigPhablet breakpoint
-                    @include breakpoint(bigPhablet) {
-                        width: 35%;
-                    }
-                    // medPhablet breakpoint
-                    @include breakpoint(medPhablet) {
-                        width: 45%;
-                    }
-                    // phablet breakpoint
-                    @include breakpoint(phablet) {
-                        width: 40%;
-                    }
-                        &:hover {
-                            background: #FFE4E1;
-                        }
-                }
-            }
+        .note {
+          padding: 70px 0;
         }
-        .contactMe {
-            margin-top: 45px;
-            // medPhablet breakpoint
-            @include breakpoint(medPhablet) {
-                margin-top: 0;
-            }
-            p {
-                @include text(1.9rem);
-                margin-top: 20px;
-            }
-            .social {
-                margin: 30px 0;
-                .icon {
-                    font-size: 3rem;
-                }
-                a {
-                    @include text(2rem);
-                    text-decoration: none;
-                    color: $black;
-                    margin-left: 10px;
-                    // medPhablet breakpoint
-                    @include breakpoint(medPhablet) {
-                        font-size: 1.8rem;
-                    }
-                     //  mobile breakpoint
-                     @include breakpoint(mobile) {
-                         font-size: 1.5rem;
-                     }
-                    //  mobileOnly breakpoint
-                    @include breakpoint(mobileOnly) {
-                        font-size: 1.4rem;
-                    }
-                }
-            }
+        .send {
+          @include heading(1.3rem);
+          background: white;
+          border: 3px solid $black;
+          width: 50%;
+          padding: 15px;
+          text-align: center;
+          margin-top: 20px;
+          transition: 1s all ease;
+          // bigPhablet breakpoint
+          @include breakpoint(bigPhablet) {
+            width: 100%;
+          }
+          &:hover {
+            background: #ffe4e1;
+          }
         }
+      }
     }
-}
-
-.emailLink {
-    font-size: 2rem;
-    // smallMobile breakpoint
-    @include breakpoint(smallMobile) {
-        font-size: .5rem;
+    .contactMe {
+      margin-top: 45px;
+      // medPhablet breakpoint
+      @include breakpoint(medPhablet) {
+        margin-top: 0;
+      }
+      p {
+        @include text(1.9rem);
+        margin-top: 20px;
+      }
+      .social {
+        margin: 30px 0;
+        .icon {
+          font-size: 3rem;
+        }
+        a {
+          @include text(2rem);
+          text-decoration: none;
+          color: $black;
+          margin-left: 10px;
+          // medPhablet breakpoint
+          @include breakpoint(medPhablet) {
+            font-size: 1.4rem;
+          }
+          //  mobile breakpoint
+          @include breakpoint(mobile) {
+            font-size: 1.5rem;
+          }
+          //  mobileOnly breakpoint
+          @include breakpoint(mobileOnly) {
+            font-size: 1.4rem;
+          }
+        }
+      }
     }
+  }
 }

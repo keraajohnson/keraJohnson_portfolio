@@ -9,22 +9,12 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="public/scripts/animate.css/animate.css">
-
     <link rel="stylesheet" href="public/styles/style.css">
-    <title>Kera Johnson</title>
+    <title>KERA.J 👋🏻</title>
 </head>
 
 <body>
-    <!-- easter egg -->
-    <div id="bagel-container" class="hide">
-        <div class="bagels bagels1"><img src="/public/assets/bens-bagels.png" alt=""></div>
-        <div class="bagels bagels2"><img src="/public/assets/bens-bagels.png" alt=""></div>
-        <div class="bagels bagels3"><img src="/public/assets/bens-bagels.png" alt=""></div>
-        <div class="bagels bagels4"><img src="/public/assets/bens-bagels.png"alt=""></div>
-        <div class="bagels bagels5"><img src="/public/assets/bens-bagels.png" alt=""></div>
-    </div>
     <!-- 1. header -->
     <header>
         <div class="wrapper">
@@ -71,14 +61,19 @@
                     <img src="/public/assets/keraTempPhoto.jpg" alt="">
                 </div>
                 <div class="aboutText">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam esse architecto, vitae quidem
-                        cupiditate quas dignissimos aut possimus animi molestias soluta accusamus sint corrupti cum
-                        sequi officia, quam praesentium consequatur?Lorem ipsum dolor sit amet consectetur</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere exercitationem doloribus
-                        repudiandae possimus earum illo, itaque, inventore culpa nesciunt excepturi vero neque.
-                        Expedita esse ut quasi. Aperiam ea minus dolore!</p>
-                    <p>TL;DR I'm a (former) reality TV producer turned front end web developer who lives for 'aha'
-                        coding moments. </p>
+                    <p>My name is Kera and I’m a front-end web developer born and raised in Toronto. </p>
+                    <p>In 2014 I graduated with a masters degree in Film/TV production and quickly found myself
+                        producing reality TV for various North American networks. However for the last two years I
+                        exclusively created content for the Discovery Channel, which is where I discovered the
+                        importance of recognizing your online audience (thanks for that Netflix). </p>
+                    <p>I started coding with HackerYou at the beginning of 2018 but my love for web development was
+                        born in the MySpace era. I love to write clean, dynamic and functional code that looks great
+                        online and in my text editor. I consider myself to be a lifelong learner, and I can’t wait to
+                        sink my teeth into the next great framework or js library.</p>
+                    <p>When I’m not coding you can find me catching up on Big Brother, hanging out with my sister(’s
+                        dog, Porkie) or training for my next marathon. </p>
+                    <p><span class="tldr">TL;DR</span> I'm a (former) reality TV producer turned front end web
+                        developer who lives for 'aha'coding moments. </p>
                 </div>
             </div>
         </section>
@@ -129,7 +124,7 @@
             <div class="wrapper">
                 <h2 class="wow slideInRight animate">Selected Work</h2>
                 <!-- 2.3a beer bible -->
-                <div class="beerBible project">
+                <div class="beerBible project reverse wow fadeInUp">
                     <div class="description">
                         <h3>01. Beer Bible</h3>
                         <div class="languages">
@@ -140,25 +135,31 @@
                             <p>SASS</p>
                             <p>Git</p>
                         </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, dolore. Corrupti numquam
-                            ipsum accusamus nisi, maiores magni? Sequi cumque eveniet perspiciatis a excepturi, ipsa
-                            asperiores possimus soluta corporis voluptatibus. Quos.</p>
+                        <p> Client request. For beer makers, allowing for search of recipes based on leftover
+                            ingredients, save recipes, and keep notes on each recipe upon authentication.</p>
                         <div class="view">
-                            <button>Live</button>
-                            <button>GitHub</button>
+                            <a href="https://beer-bible-553e1.firebaseapp.com/" target="_blank">Live</a>
+                            <a href="https://github.com/keraajohnson/beer-bible" target="_blank">Github</a>
                         </div>
                     </div>
                     <div class="mockup">
                         <div class="laptop">
-                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
+                            <img src="/public/assets/DT-beer-bible.png" alt="">
+                            <div class="phone">
+                                <img src="/public/assets/SP-beer-bible.png" alt="">
+                            </div>
                         </div>
+
                     </div>
                 </div>
                 <!-- 2.3b recipe box -->
-                <div class="recipeBox project">
+                <div class="recipeBox project wow fadeInUp">
                     <div class="mockup">
                         <div class="laptop">
-                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
+                            <img src="/public/assets/DT-recipes.png" alt="">
+                            <div class="phoneTwo">
+                                <img src="/public/assets/SP-recipes.png" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="description">
@@ -169,19 +170,18 @@
                             <p>Firebase</p>
                             <p>Git</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ab? Et nostrum saepe odio
-                            consequuntur. Qui,
-                            facilis harum. Dolor voluptatem repellendus architecto totam laborum voluptates, voluptatum
-                            nobis. Accusamus,
-                            itaque praesentium.</p>
+                        <p>Allows the user to sign up or log into their account where they can save new recipes or look
+                            at previously saved recipes. For those lazy users just looking to get some dinner
+                            inspiration there's a community libary of previously saved recipes that appear on page load
+                            (if unauthenticated)</p>
                         <div class="view">
-                            <button>Live</button>
-                            <button>GitHub</button>
+                            <a href="https://virtual-recipe-box.firebaseapp.com/" target="_blank">Live</a>
+                            <a href="https://github.com/keraajohnson/keraJohnson_project5" target="_blank">Github</a>
                         </div>
                     </div>
                 </div>
                 <!-- 2.3c capital cities -->
-                <div class="capitalCities project">
+                <div class="capitalCities project reverse wow fadeInUp">
                     <div class="description">
                         <h3>03. Capital.ly Confused</h3>
                         <div class="languages">
@@ -191,25 +191,31 @@
                             <p>Gulp</p>
                             <p>Git</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla suscipit vitae temporibus!
-                            Eos exercitationem sed, odio laudantium error quibusdam libero nostrum incidunt temporibus
-                            repellendus officiis hic doloremque voluptates unde nobis.</p>
+                        <p>It's hard to remember all of the capital cities in the world but this game puts the users
+                            knowledge to the test - all in under a minute. The user has to guess as many capital cities
+                            as possible and is given a score sheet once the timer is up.</p>
                         <div class="view">
-                            <button>Live</button>
-                            <button>GitHub</button>
+                            <a href="https://keraajohnson.github.io/benKelly_keraJohnson_project4/" target="_blank">Live</a>
+                            <a href="https://github.com/keraajohnson/benKelly_keraJohnson_project4" target="_blank">Github</a>
                         </div>
                     </div>
                     <div class="mockup">
                         <div class="laptop">
-                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
+                            <img src="/public/assets/DT-confused.png" alt="">
+                            <div class="phone">
+                                <img src="/public/assets/SP-confused.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- 2.3d excuses excuses -->
-                <div class="excusesExcuses project">
+                <div class="excusesExcuses project wow fadeInUp">
                     <div class="mockup">
                         <div class="laptop">
-                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
+                            <img src="/public/assets/DT-excuses.png" alt="">
+                            <div class="phoneTwo">
+                                <img src="/public/assets/SP-excuses.png" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="description">
@@ -220,19 +226,20 @@
                             <p>SASS</p>
                             <p>Git</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nisi nostrum alias
-                            inventore, accusantium
-                            debitis soluta quia consequuntur sapiente odit qui porro maiores minima perspiciatis illo!
-                            Ratione eligendi aut
-                            voluptas.</p>
+                        <p>Ever have that date, hang out or family reunion you need to bail on? This app was built for
+                            you. Using JavaScript
+                            and jQuery, the user is asked a series of questions and provided a response that perfectly
+                            explains why they need
+                            to bail on their plans. <span class="ruined">App creator not responsible for ruined
+                                relationships.</span></p>
                         <div class="view">
-                            <button>Live</button>
-                            <button>GitHub</button>
+                            <a href="https://keraajohnson.github.io/keraJohnson_project3/" target="_blank">Live</a>
+                            <a href="https://github.com/keraajohnson/keraJohnson_project3" target="_blank">Github</a>
                         </div>
                     </div>
                 </div>
                 <!-- 2.3e psd conversion -->
-                <div class="psd project">
+                <div class="psd project reverse wow fadeInUp">
                     <div class="description">
                         <h3>05. PSD Conversion</h3>
                         <div class="languages">
@@ -241,39 +248,42 @@
                             <p>jQuery</p>
                             <p>Git</p>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet repudiandae qui sequi
-                            recusandae magni necessitatibus culpa cum, corrupti ut maxime eius explicabo obcaecati
-                            error, asperiores inventore dolores officia atque aliquid.</p>
+                        <p>Single page PSD conversion using flexbox. Fully responsive across all devices,
+                            pixel perfect complete
+                            with engaging micro-interactions and some pretty fun hover states. Design provided by HackerYou designer, Melissa Carter.</p>
                         <div class="view">
-                            <button>Live</button>
-                            <button>GitHub</button>
+                            <a href="https://keraajohnson.github.io/keraJohnson_project2/" target="_blank">Live</a>
+                            <a href="https://github.com/keraajohnson/keraJohnson_project2" target="_blank">GitHub</a>
                         </div>
                     </div>
                     <div class="mockup">
                         <div class="laptop">
-                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
+                            <img src="/public/assets/DT-psd-conversion.png" alt="">
+                            <div class="phone">
+                                <img src="/public/assets/SP-psd-conversion.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="tv project">
+                <div class="tv project wow fadeInUp">
                     <div class="heading">
-                        <h3>Shows I've Produced</h3>
+                        <h3>Shows I've Made</h3>
                     </div>
                     <div class="shows">
                         <div class="him show">
                             <h4>How It's Made</h4>
                             <p>Discovery Canada</p>
-                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
+                            <img src="/public/assets/how-its-made.png" alt="">
                         </div>
                         <div class="ftn show">
                             <h4>Fear Thy Neighbor</h4>
                             <p>Investigation Discovery</p>
-                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
+                            <img src="/public/assets/fear-thy-neighbour.png" alt="">
                         </div>
                         <div class="equator show">
                             <h4>Equator</h4>
                             <p>Discovery Canada</p>
-                            <img src="/public/assets/beerBibleScreenshot_macbookpro13_front.png" alt="">
+                            <img src="/public/assets/equator.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -286,7 +296,7 @@
                     <h3>Like what you see?</h3>
                     <p>Here's Where You Can Find Me</p>
                     <div class="email social">
-                        <i class="far fa-paper-plane icon"></i> <a class="emailLink" href="mailto:kera.andrea@gmail.com">hello[at]keracodes[dot]com</a>
+                        <i class="far fa-paper-plane icon"></i> <a class="mailLink" href="mailto:kera.andrea@gmail.com">hello[at]keracodes[dot]com</a>
                     </div>
                     <div class="twitter social">
                         <i class="fab fa-twitter icon"></i>
@@ -311,15 +321,15 @@
                             <h3>Say Hi(re me)</h3>
                             <!-- name input -->
                             <label for="name" class="nameLabel visuallyHidden" id="nameLabel">Name</label>
-                            <input type="text" name="name" class="name" id="name" placeholder="name">
+                            <input required type="text" name="name" class="name" id="name" placeholder="name">
                             <!-- email input -->
                             <label for="email" class="visuallyHidden">Your Email</label>
-                            <input type="email" placeholder="email" name="email" class="email" id="email">
+                            <input required type="email" placeholder="email" name="email" class="email" id="email">
                             <!-- note input -->
                             <label for="note" class="visuallyHidden">Note</label>
-                            <input type="textArea" placeholder="note" name="note" class="note" id="note">
+                            <input required type="textArea" placeholder="note" name="note" class="note" id="note">
                             <!-- submit button -->
-                            <input type="submit" class="send" value="send">
+                            <input type="submit" class="send" value="let's talk">
                         </form>
                     </div>
                 </div>
@@ -333,10 +343,8 @@
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
         crossorigin='anonymous'></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script src="public/scripts/wowjs/dist/wow.min.js"></script>
-
     <script src="public/scripts/app.js"></script>
 </body>
 

@@ -6,24 +6,37 @@
             margin-bottom: 50px;
             text-align: center;
             font-weight: 500;
+                // medPhablet breakpoint
+                @include breakpoint(medPhablet) {
+                    margin-bottom: 20px;
+                }
         }
         .skillsContainer {
             @include displayFlex;
+            justify-content: center;
             flex-wrap: wrap;
-            min-width: 540px;
-                .skill {
-                    font-size: 8.7rem;
-                    color: $black;
-                    margin: 0 10px;
-                }
+               .boxOne,
+               .boxTwo {
+                   @include displayFlex;
+                   flex-grow: 1;
+                    .trick {
+                       flex-grow: 1;
+                       text-align: center;
+                       margin: 10px;
+                        .skill {
+                            font-size: 8.7rem;
+                            color: $black;
+                            // medPhablet breakpoint
+                            @include breakpoint(medPhablet) {
+                                font-size: 6rem;
+                            }
+                            // mobile breakpoint
+                            @include breakpoint(mobile) {
+                                font-size: 4.5rem;
+                            }
+                        }
+                   }
+               }
             }
         }
 
-        .boxOne, 
-        .boxTwo {
-            @include displayFlex;
-            flex-grow: 1;
-                .trick {
-                    flex-grow: 1;
-                }
-        }

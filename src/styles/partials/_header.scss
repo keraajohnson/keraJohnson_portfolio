@@ -1,116 +1,116 @@
 // header nav styles
 header {
-    height: 100vh;
-    // background: red;
-    @include breakpoint(medPhablet) {
-        height: 80vh;
-    }
+  height: 100vh;
+  // background: red;
+  @include breakpoint(bigPhablet) {
+    height: 80vh;
+  }
 }
 .nav {
-    @include breakpoint(medPhablet) {
-        display: none;
+  @include breakpoint(medPhablet) {
+    display: none;
+  }
+  ul {
+    @include displayFlex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    background-color: white;
+    li {
+      list-style-type: none;
+      a {
+        @include heading(1.7rem);
+        text-decoration: none;
+        color: $black;
+        padding: 10px 20px;
+      }
     }
-   ul {
-       @include displayFlex;
-       justify-content: flex-end;
-       margin-top: 20px;
-       background-color: white;
-       li {
-            list-style-type: none;
-            a {
-                @include heading(1.7rem);
-                text-decoration: none;
-                color: $black;
-                padding: 10px 20px;
-            }
-       }
-   }
+  }
 }
 
 .navMobile {
+  display: none;
+  width: 100%;
+  // position: absolute;
+  @include breakpoint(medPhablet) {
+    display: block;
+  }
+  .hamburger {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    .icon {
+      font-size: 4rem;
+    }
+  }
+  .menu {
     display: none;
+    background: rgb(247, 245, 245);
     width: 100%;
-    // position: absolute;
-    @include breakpoint(medPhablet) {
-        display: block;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-top: 0;
+    z-index: 10;
+    .icon {
+      font-size: 4rem;
     }
-    .hamburger {
-        position: absolute;
-        right: 30px;
-        top: 20px;
-            .icon {
-                font-size: 4rem;
-            }
-    }
-    .menu {
-        display: none;
-        background: white;
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        margin-top: 0;
-        .icon {
-            font-size: 4rem;
+    li {
+      list-style: none;
+      padding: 40px;
+      text-align: center;
+      a {
+        @include heading(4rem);
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $black;
+        transition: color 0.5s ease;
+        &:hover {
+          color: black;
         }
-        li {
-            list-style: none;
-            padding: 20px;
-            text-align: center;
-            a {
-                @include heading(4rem);
-                text-decoration: none;
-                text-transform: uppercase;
-                color: $black;
-                transition: color 0.5s ease;
-                &:hover {
-                    color: black;
-                }
-            }
-        }
+      }
     }
+  }
 
-    .show {
-        display: block;
-        width: 100%;
-    }
+  .show {
+    display: block;
+    width: 100%;
+  }
 }
 
- .bars {
-     width: 8%;
-     float: right;
- }
+.bars {
+  width: 8%;
+  float: right;
+}
 
 .headerMain {
-    margin-top: 135px;
-    @include displayFlex;
-        .hi,
-        .photo {
-            width: 50%;
-        }
-        .hi{
-            margin-top: 50px;
-            // bigPhablet breakpoint
-            @include breakpoint(bigPhablet) {
-                width: 100%;
-            }
-            // 
-            @include breakpoint(medPhablet){
-                margin-top: 100px;
-            }
-        }
-        .photo {
-            // bigPhablet breakpoint
-            @include breakpoint(bigPhablet) {
-                display: none;
-            }
-        }
-    h2{
-        @include heading(2.5rem);
-        background: white;
-        padding: 15px;
+  margin-top: 135px;
+  @include displayFlex;
+  .hi,
+  .photo {
+    width: 50%;
+  }
+  .hi {
+    margin-top: 50px;
+    // bigPhablet breakpoint
+    @include breakpoint(bigPhablet) {
+      width: 100%;
     }
+    //
+    @include breakpoint(medPhablet) {
+      margin-top: 100px;
+    }
+  }
+  .photo {
+    // bigPhablet breakpoint
+    @include breakpoint(bigPhablet) {
+      display: none;
+    }
+  }
+  h2 {
+    @include heading(2.5rem);
+    background: white;
+    padding: 15px;
+  }
 }
